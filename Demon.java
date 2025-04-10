@@ -8,10 +8,9 @@
 public class Demon extends Creature
 {
     // instance variables - replace the example below with your own
-    public int str;        // The strength of this creature
+    private int str;        // The strength of this creature
     private int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
-    public int hp;
-
+    private int hp;
     /**
      * Constructor for objects of class Demon
      */
@@ -19,6 +18,7 @@ public class Demon extends Creature
     {
        super(str,hp);
     }
+
 
     /**
      * An example of a method - replace this comment with your own
@@ -33,6 +33,9 @@ public class Demon extends Creature
         if ((chance >= 1) && (chance <= 5)){
             return damage + 50;
         }
-        return attack();
+        else{
+            return damage;
+        }
+        
     }
 }

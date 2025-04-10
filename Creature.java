@@ -13,9 +13,9 @@
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
 {
-    public int str;        // The strength of this creature
+    private int str;        // The strength of this creature
     private int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
-    public int hp;         // the current numberof hit points the creature has
+    private int hp;         // the current numberof hit points the creature has
     
     /**
      * Create a creature with a given strength and hit point level. 
@@ -31,12 +31,20 @@ public abstract class Creature
        max_hp = hp;
     }
     
+    public void setStr(int str){
+        str = this.str;
+    }
+    
+    public void setHP(int hp){
+        hp = this.hp;
+    }
+    
     public int getStr(){
         return str;
     }
     
     public int getHP(){
-        return hp;
+        return max_hp;
     }
     
     /**
@@ -46,7 +54,6 @@ public abstract class Creature
     public int attack(){
         return Randomizer.nextInt(str) + 1;
     }
-    
     
     /**
      * Is this creature still capable of fighting?
@@ -67,7 +74,7 @@ public abstract class Creature
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isKnockedOut() {
-        if (hp <= 0){
+        if (max_hp <= 0){
             return true;
         }
         else

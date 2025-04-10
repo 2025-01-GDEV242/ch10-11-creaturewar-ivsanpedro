@@ -51,6 +51,8 @@ public class Elf extends Creature
         if ((chance >= 1) && (chance <= 10)){
             return damage*2;
         }
-        return attack();
+        else{
+            return damage;
+        }
     }
 }
