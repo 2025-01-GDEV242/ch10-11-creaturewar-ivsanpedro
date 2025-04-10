@@ -14,6 +14,7 @@ public class Elf extends Creature
     private static final int MIN_ELF_HP = 8;
     private static final int MAX_ELF_STR = 20;
     private static final int MIN_ELF_STR = 5;
+    Integer[] chance;
 
     /**
      * Constructor for objects of class Elf -
@@ -37,13 +38,18 @@ public class Elf extends Creature
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * 10% chance to allow an elf to do twice the damage as the base damage
+     * Takes the base damage and multiplies it by 2
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  none
+     * @return the value from base damage multiplied by 2
      */
     public int magicAttack()
     {
-        return 2*attack();
+        int chance = Randomizer.nextInt(100)+1;
+        if ((chance >= 1) && (chance <= 10)){
+            return attack()*2;
+        }
+        return attack();
     }
 }

@@ -78,10 +78,6 @@ public abstract class Creature
     public void takeDamage(int damage) {
         int currentHP = hp - damage;
         max_hp = currentHP;
-        
-        if (damage > max_hp){
-            System.out.println("Error: damage cannot be more than existing hit power");
-        }
     }
     
 }
