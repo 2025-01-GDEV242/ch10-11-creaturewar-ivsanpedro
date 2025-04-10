@@ -44,11 +44,12 @@ public class Elf extends Creature
      * @param  none
      * @return the value from base damage multiplied by 2
      */
-    public int magicAttack()
+    public int magAttackElf()
     {
+        int damage = super.attack();
         int chance = Randomizer.nextInt(100)+1;
         if ((chance >= 1) && (chance <= 10)){
-            return attack()*2;
+            return damage*2;
         }
         return attack();
     }

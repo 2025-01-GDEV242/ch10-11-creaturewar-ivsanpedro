@@ -13,9 +13,9 @@
 // we will learn what the abstract keyword does in a later chapter
 public abstract class Creature
 {
-    private int str;        // The strength of this creature
+    public int str;        // The strength of this creature
     private int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
-    private int hp;         // the current numberof hit points the creature has
+    public int hp;         // the current numberof hit points the creature has
     
     /**
      * Create a creature with a given strength and hit point level. 
@@ -31,6 +31,13 @@ public abstract class Creature
        max_hp = hp;
     }
     
+    public int getStr(){
+        return str;
+    }
+    
+    public int getHP(){
+        return hp;
+    }
     
     /**
      * Allows a creature to determine how much damage it is causing in this round of battle

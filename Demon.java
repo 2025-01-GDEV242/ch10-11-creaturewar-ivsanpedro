@@ -8,14 +8,16 @@
 public class Demon extends Creature
 {
     // instance variables - replace the example below with your own
-    private int x;
+    public int str;        // The strength of this creature
+    private int max_hp;     // The maximum hit points the creature can have (used if healing enabled)
+    public int hp;
 
     /**
      * Constructor for objects of class Demon
      */
-    public Demon()
+        public Demon(int str, int hp) 
     {
-        
+       super(str,hp);
     }
 
     /**
@@ -24,9 +26,13 @@ public class Demon extends Creature
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public int magAttackDemon()
     {
-        // put your code here
-        return x + y;
+        int damage = super.attack();
+        int chance = Randomizer.nextInt(100)+1;
+        if ((chance >= 1) && (chance <= 5)){
+            return damage + 50;
+        }
+        return attack();
     }
 }
