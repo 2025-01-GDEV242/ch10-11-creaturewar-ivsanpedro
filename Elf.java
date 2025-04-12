@@ -41,7 +41,7 @@ public class Elf extends Creature
      * 10% chance to allow an elf to do twice the damage as the base damage
      * Takes the base damage and multiplies it by 2
      *
-     * @param  none
+     * @param  creature
      * @return the value from base damage multiplied by 2 or value from base damage
      */
     public int attack(Creature creature)

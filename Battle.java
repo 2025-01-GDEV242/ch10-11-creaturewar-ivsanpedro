@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 /**
- * Write a description of class Battle here.
+ * The Battle class creates an arraylist for two armies that will then battle against each other.
+ * 
  *
  * @author (your name)
  * @version (a version number or a date)

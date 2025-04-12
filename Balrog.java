@@ -1,9 +1,11 @@
 
 /**
- * Write a description of class Balrog here.
+ * Class Balrog extends class Demon. 
+ * Implements a maximum/minimum strength for the creature type [50/100]
+ * Implements a maximum/minimum hitpoint total for the creature type [80/200]
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Ivana San Pedro 
+ * @version 2025-4-8
  */
 public class Balrog extends Demon
 {

@@ -1,9 +1,11 @@
 
 /**
- * Write a description of class Dwarves here.
+ * The Elf class implements a wrapper for the base Creature class with the following additions
+ * Implements a maximum/minimum strength for the creature type [8/25]
+ * Implements a maximum/minimum hitpoint total for the creature type [10/30]
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Ivana San Pedro 
+ * @version 2025-4-8
  */
 public class Dwarves extends Creature
 {
@@ -14,7 +16,12 @@ public class Dwarves extends Creature
     private static final int MIN_DWARF_STR = 8;
 
     /**
-     * Constructor for objects of class Dwarves
+     * Constructor for objects of class Dwarves -
+     * Note that the calling class does not need to know anything about the 
+     * requirements of Dwarves minimum and maximum values
+     * 
+     * The instantiating class asks for a Dwarf and the Dwarf class is responsible for
+     * return a Dwarf object with values in the appropriate range
      */
         public Dwarves()
     {
@@ -26,9 +33,10 @@ public class Dwarves extends Creature
 
     /**
      * 50% chance to apply 10 more damage than base damage
+     * Elf will return base damage for other 50%
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  creature
+     * @return   damage
      */
     public int attack(Creature creature)
     {

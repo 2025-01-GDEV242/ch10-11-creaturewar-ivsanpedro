@@ -21,10 +21,11 @@ public class Demon extends Creature
 
 
     /**
-     * An example of a method - replace this comment with your own
+     * A demon has a 5% chance to apply 50 more hitpoints 
+     * Demon will return base damage for the other 95%
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  creature
+     * @return    damage
      */
     public int attack(Creature creature)
     {
