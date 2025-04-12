@@ -40,12 +40,12 @@ public class Battle
                 Elf elf = new Elf();
                 army1.add(elf);
             }
-            // if ((num==9) || (num==10)){
-                // Elf elf = new Elf();
-                // army1.add(elf);
-            // }
+            if ((num==9) || (num==10)){
+                Dwarves dwarf = new Dwarves();
+                army1.add(dwarf);
+            }
         }
-        
+        //System.out.println(army1);
         //fill Army2
         for (int index = 1; index<=50; index++){
             int num = Randomizer.nextInt(25)+1;
@@ -62,7 +62,9 @@ public class Battle
                 army2.add(balrog);
             }
         }
+        System.out.println(army2);
     }
+
 
     /**
      * An example of a method - replace this comment with your own
@@ -70,9 +72,14 @@ public class Battle
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void fight(int y)
+    public void fight()
     {
-        // put your code here
-        return x + y;
+        fillArmy();
+        int index = 0;
+        while ((army1.get(index).isAlive()) && (army2.get(index).isAlive())){
+            army1.get(index).attack(army2.get(index));
+            army2.get(index).takeDamage(army1.get(index).attack(army2.get(index)));
+            index++;
+        }
     }
 }

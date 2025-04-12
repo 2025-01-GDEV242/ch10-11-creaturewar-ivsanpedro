@@ -30,10 +30,10 @@ public class Balrog extends Demon
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int attackBalrog()
+    public int attack(Creature creature)
     {
-        int damage = super.magAttackDemon();
-        int doubleDamage = damage + super.magAttackDemon();
+        int damage = super.attack(creature);
+        int doubleDamage = damage + super.attack(creature);
         return doubleDamage;
     }
 }

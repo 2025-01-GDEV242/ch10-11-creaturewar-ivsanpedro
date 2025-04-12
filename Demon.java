@@ -26,9 +26,9 @@ public class Demon extends Creature
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int magAttackDemon()
+    public int attack(Creature creature)
     {
-        int damage = super.attack();
+        int damage = super.attack(creature);
         int chance = Randomizer.nextInt(100)+1;
         if ((chance >= 1) && (chance <= 5)){
             return damage + 50;

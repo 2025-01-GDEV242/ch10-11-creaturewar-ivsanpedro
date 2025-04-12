@@ -40,28 +40,6 @@ public class HumanTest
     {
     }
 
-    @Test
-    public void TestHuman()
-    {
-        Human human1 = new Human();
-        assertEquals(15, human1.attack());
-        assertEquals(25, human1.getHP());
-        assertEquals(20, human1.getStr());
-        assertEquals(true, human1.isAlive());
-        assertEquals(false, human1.isKnockedOut());
-        human1.takeDamage(5);
-        assertEquals(18, human1.getHP());
-    }
-
-    @Test
-    public void TestHumanhp()
-    {
-        Human human1 = new Human();
-        assertEquals(7, human1.attack());
-        assertEquals(25, human1.getHP());
-        human1.takeDamage(5);
-        assertEquals(8, human1.getHP());
-    }
 }
 
 

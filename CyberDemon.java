@@ -30,9 +30,9 @@ public class CyberDemon extends Demon
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int attackCyb()
+    public int attack(Creature creature)
     {
-        int damage = super.magAttackDemon();
+        int damage = super.attack(creature);
         return damage;
     }
 }
